@@ -26,6 +26,11 @@ library(dplyr)
 library(ggplot2)
 library(ggrepel)
 
+gdc_project = getGDCprojects()
+head(gdc_project[c("project_id", "name")])
+View(gdc_project)
+gdc_project[c("project_id", "name")]
+
 
 
 
