@@ -30,6 +30,24 @@ gdc_project = getGDCprojects()
 head(gdc_project[c("project_id", "name")])
 View(gdc_project)
 gdc_project[c("project_id", "name")]
+gdc_project$project_id
+getProjectSummary("TCGA-STAD") 
+
+snv_query = GDCquery(project = "TCGA-STAD",
+                     data.category = "Simple Nucleotide Variation")
+
+View(snv_query) #this is not readablefor us
+output_snv_query=getResults(snv_query)
+View(output_snv_query)
+
+
+
+
+
+
+
+
+
 
 
 
