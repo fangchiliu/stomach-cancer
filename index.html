@@ -3,155 +3,258 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Under Development</title>
-
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --border: rgba(255,255,255,0.08);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Inter, Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 720px;
-    }
-
-    .card {
-      background: rgba(17, 24, 39, 0.9);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 48px;
-      backdrop-filter: blur(10px);
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.35),
-        inset 0 1px 0 rgba(255,255,255,0.04);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      border: 1px solid rgba(56, 189, 248, 0.25);
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      text-decoration: none;
-      padding: 14px 22px;
-      border-radius: 14px;
-      font-weight: 600;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #0f172a;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      opacity: 0.92;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--border);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.05);
-    }
-
-    footer {
-      margin-top: 28px;
-      text-align: center;
-      color: #64748b;
-      font-size: 14px;
-    }
-
-    @media (max-width: 640px) {
-      .card {
-        padding: 32px 24px;
-      }
-    }
-  </style>
+  <title>Transcriptomic Landscape of Gastric Adenocarcinoma</title>
+  <meta name="description" content="A multi-modal RNA-seq analysis of gastric adenocarcinoma integrating TCGA-STAD bulk transcriptomics and CZ CELLxGENE single-cell data." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-  <div class="container">
-    <div class="card">
+<!-- Navigation -->
+<header id="site-nav"></header>
 
-      <div class="badge">🚧 Under Development</div>
+<!-- ── Hero ──────────────────────────────────────────────────── -->
+<section class="hero text-white" style="padding: 5rem 1.5rem 4.5rem;">
+  <div style="max-width:800px; margin:0 auto; position:relative; z-index:1;">
+    <div class="hero-label" style="margin-bottom:1.5rem;">
+      TCGA-STAD &nbsp;·&nbsp; Bulk RNA-seq &nbsp;·&nbsp; scRNA-seq (in progress)
+    </div>
 
-      <h1>Your Project Name</h1>
+    <h1 style="font-size:clamp(1.9rem,5vw,3rem); font-weight:800; line-height:1.15; color:#fff; margin-bottom:1rem; letter-spacing:-0.025em;">
+      Transcriptomic Landscape<br/>of Gastric Adenocarcinoma
+    </h1>
 
-      <p>
-        This project is currently being built.  
-        New features, documentation, and updates will be added soon.
-      </p>
+    <p style="font-size:1.1rem; color:#94a3b8; max-width:600px; margin-bottom:2rem; line-height:1.65;">
+      Integrating bulk and single-cell RNA sequencing to characterize differential gene expression,
+      tumor microenvironment composition, and clinically actionable pathway dysregulation in
+      stomach adenocarcinoma.
+    </p>
 
-      <div class="buttons">
-        <a class="btn btn-primary" href="https://github.com/YOUR_USERNAME/YOUR_REPO">
-          View Repository
-        </a>
+    <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
+      <a href="results.html" class="btn-primary">
+        View Results &nbsp;→
+      </a>
+      <a href="methods.html" class="btn-outline">
+        Read Methods
+      </a>
+    </div>
 
-        <a class="btn btn-secondary" href="#">
-          Documentation Coming Soon
-        </a>
+    <!-- Quick-stat strip -->
+    <div style="display:flex; flex-wrap:wrap; gap:2.5rem; margin-top:3.5rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.12);">
+      <div>
+        <div style="font-size:1.85rem; font-weight:800; color:#fff;">375</div>
+        <div style="font-size:0.78rem; color:#94a3b8; font-weight:500; margin-top:0.1rem;">TCGA-STAD patients</div>
+      </div>
+      <div>
+        <div style="font-size:1.85rem; font-weight:800; color:#fff;">~20K</div>
+        <div style="font-size:0.78rem; color:#94a3b8; font-weight:500; margin-top:0.1rem;">genes quantified</div>
+      </div>
+      <div>
+        <div style="font-size:1.85rem; font-weight:800; color:#fff;">3</div>
+        <div style="font-size:0.78rem; color:#94a3b8; font-weight:500; margin-top:0.1rem;">analytical modules</div>
+      </div>
+      <div>
+        <div style="font-size:1.85rem; font-weight:800; color:#fff; color:#5eead4;">Live</div>
+        <div style="font-size:0.78rem; color:#94a3b8; font-weight:500; margin-top:0.1rem;">scRNA-seq integration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Project Overview ───────────────────────────────────────── -->
+<section style="padding:4.5rem 1.5rem; background:#fff;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <span class="section-eyebrow">Overview</span>
+    <h2 style="font-size:1.75rem; margin-bottom:1rem;">Why Gastric Adenocarcinoma?</h2>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; margin-top:2rem;">
+
+      <div class="card card-accent">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">🎯</div>
+        <h3 style="font-size:1rem; margin-bottom:0.5rem;">Clinical Motivation</h3>
+        <p style="font-size:0.875rem; color:#475569; line-height:1.7;">
+          Gastric adenocarcinoma (STAD) is the fifth most common malignancy worldwide, with a
+          5-year survival rate below 35% for stage III–IV disease. Despite recent advances in
+          HER2-targeted and checkpoint immunotherapy, a substantial fraction of patients lack
+          actionable molecular targets — underscoring the need for deeper transcriptomic
+          characterization.
+        </p>
+      </div>
+
+      <div class="card card-accent">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">🧬</div>
+        <h3 style="font-size:1rem; margin-bottom:0.5rem;">Scientific Approach</h3>
+        <p style="font-size:0.875rem; color:#475569; line-height:1.7;">
+          This project applies a multi-resolution transcriptomic framework: bulk RNA-seq from
+          TCGA-STAD provides population-level differential expression and survival associations,
+          while upcoming single-cell analysis from CZ CELLxGENE will resolve cell-type-specific
+          expression programs and tumor microenvironment heterogeneity.
+        </p>
+      </div>
+
+      <div class="card card-accent">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">📊</div>
+        <h3 style="font-size:1rem; margin-bottom:0.5rem;">Analytical Scope</h3>
+        <p style="font-size:0.875rem; color:#475569; line-height:1.7;">
+          Analyses span differential expression (DESeq2), Kaplan-Meier survival modeling,
+          gene set enrichment analysis (GSEA) against Hallmark and KEGG gene sets, and
+          cell-type deconvolution. All code, processed data, and figures are tracked in
+          version-controlled repositories.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ── Data Sources ───────────────────────────────────────────── -->
+<section style="padding:4.5rem 1.5rem; background:#f8fafc;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <span class="section-eyebrow">Data Sources</span>
+    <h2 style="font-size:1.75rem; margin-bottom:0.5rem;">Datasets Used in This Study</h2>
+    <p style="color:#64748b; font-size:0.9rem; max-width:560px; margin-bottom:2rem;">
+      Both datasets are publicly available through institutional repositories and adhere to
+      all applicable data use agreements.
+    </p>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap:1.5rem;">
+
+      <!-- TCGA-STAD -->
+      <div class="card" style="border-top:4px solid #0d9488;">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1.25rem;">
+          <div>
+            <div style="font-weight:800; font-size:1.1rem; color:#0f172a;">TCGA-STAD</div>
+            <div style="font-size:0.8rem; color:#64748b; margin-top:0.15rem;">The Cancer Genome Atlas — Stomach Adenocarcinoma</div>
+          </div>
+          <span class="datasource-badge badge-active">● Active</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.75rem; margin-bottom:1.25rem;">
+          <div>
+            <div class="stat-number">375</div>
+            <div class="stat-label">Patients</div>
+          </div>
+          <div>
+            <div class="stat-number">~20K</div>
+            <div class="stat-label">Genes</div>
+          </div>
+          <div>
+            <div class="stat-number">HTSeq</div>
+            <div class="stat-label">Counts</div>
+          </div>
+        </div>
+
+        <hr class="divider" style="margin-bottom:1rem;" />
+
+        <ul style="font-size:0.82rem; color:#475569; line-height:1.9; padding-left:1.1rem; margin:0;">
+          <li>GDC Data Portal (NCI), harmonized GRCh38</li>
+          <li>RNA-seq read counts (HTSeq, STAR aligner)</li>
+          <li>Clinical metadata: stage, grade, OS, PFS</li>
+          <li>Molecular subtypes: EBV, MSI, CIN, GS (TCGA 2014)</li>
+        </ul>
+      </div>
+
+      <!-- CZ CELLxGENE -->
+      <div class="card" style="border-top:4px solid #f59e0b;">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1.25rem;">
+          <div>
+            <div style="font-weight:800; font-size:1.1rem; color:#0f172a;">CZ CELLxGENE</div>
+            <div style="font-size:0.8rem; color:#64748b; margin-top:0.15rem;">Chan Zuckerberg Initiative — Single-Cell Census</div>
+          </div>
+          <span class="datasource-badge badge-inprogress">⏳ In Progress</span>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1.25rem;">
+          <div>
+            <div class="stat-number" style="font-size:1.6rem;">~50K</div>
+            <div class="stat-label">Est. cells</div>
+          </div>
+          <div>
+            <div class="stat-number" style="font-size:1.6rem;">10x</div>
+            <div class="stat-label">Platform</div>
+          </div>
+        </div>
+
+        <hr class="divider" style="margin-bottom:1rem;" />
+
+        <ul style="font-size:0.82rem; color:#475569; line-height:1.9; padding-left:1.1rem; margin:0;">
+          <li>CellxGene Discover: gastric cancer datasets</li>
+          <li>10x Chromium scRNA-seq (3′ v3 chemistry)</li>
+          <li>Cell-type annotations via Seurat / SingleR</li>
+          <li>Integration with bulk deconvolution pipeline</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ── Analysis Highlights ────────────────────────────────────── -->
+<section style="padding:4.5rem 1.5rem; background:#fff;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <span class="section-eyebrow">Analysis Highlights</span>
+    <h2 style="font-size:1.75rem; margin-bottom:2rem;">Key Findings (Preliminary)</h2>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem;">
+
+      <div class="card" style="text-align:center; padding:1.5rem 1.25rem;">
+        <div style="font-size:2rem; font-weight:800; color:#0d9488;">1,247</div>
+        <div style="font-size:0.8rem; color:#64748b; margin-top:0.3rem; line-height:1.5;">
+          Differentially expressed genes<br/>(|log₂FC| &gt; 1.5, FDR &lt; 0.05)
+        </div>
+      </div>
+
+      <div class="card" style="text-align:center; padding:1.5rem 1.25rem;">
+        <div style="font-size:2rem; font-weight:800; color:#0d9488;">p &lt; 0.001</div>
+        <div style="font-size:0.8rem; color:#64748b; margin-top:0.3rem; line-height:1.5;">
+          MKI67 high vs. low survival<br/>stratification (log-rank test)
+        </div>
+      </div>
+
+      <div class="card" style="text-align:center; padding:1.5rem 1.25rem;">
+        <div style="font-size:2rem; font-weight:800; color:#0d9488;">14</div>
+        <div style="font-size:0.8rem; color:#64748b; margin-top:0.3rem; line-height:1.5;">
+          Significantly enriched Hallmark<br/>gene sets (GSEA, FDR &lt; 0.25)
+        </div>
+      </div>
+
+      <div class="card" style="text-align:center; padding:1.5rem 1.25rem;">
+        <div style="font-size:2rem; font-weight:800; color:#0d9488;">E2F / MYC</div>
+        <div style="font-size:0.8rem; color:#64748b; margin-top:0.3rem; line-height:1.5;">
+          Top upstream regulators<br/>in tumor vs. normal contrast
+        </div>
       </div>
 
     </div>
 
-    <footer>
-      © 2026 Your Name • Built with GitHub Pages
-    </footer>
+    <div style="margin-top:1.75rem; text-align:center;">
+      <a href="results.html" class="btn-primary" style="background: var(--teal);">
+        Explore Full Results &nbsp;→
+      </a>
+    </div>
   </div>
+</section>
 
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer style="padding:2rem 1.5rem;">
+  <div style="max-width:1000px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; font-size:0.82rem;">
+    <div>
+      <span style="color:#e2e8f0; font-weight:600;">Research Portfolio — Your Name</span>
+      <span style="margin: 0 0.5rem; color:#334155;">·</span>
+      <span>TCGA-STAD Transcriptomic Analysis</span>
+    </div>
+    <div style="display:flex; gap:1.25rem;">
+      <a href="https://github.com/your-username/stad-rnaseq" target="_blank" rel="noopener">GitHub Repository</a>
+      <span style="color:#334155;">·</span>
+      <a href="mailto:your@email.edu">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/nav.js" defer></script>
 </body>
 </html>
