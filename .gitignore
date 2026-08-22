@@ -1,0 +1,19 @@
+# Generated outputs
+exports/
+plots/
+GDCdata/
+
+# Large data files
+*.rds
+*.h5ad
+*.RData
+*.RDataTmp*
+
+# R session artifacts
+.Rhistory
+.Rapp.history
+.Rproj.user/
+.Ruserdata
+
+# OS
+.DS_Store
